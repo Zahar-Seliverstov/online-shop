@@ -1,18 +1,33 @@
-# online-shop
+Запуск проекта (Online Shop)
+Серверная часть
 
-## Запуск проекта
-```
+Для работы сервера необходима база данных PostgreSQL. Настройте строку подключения в файле .env.
+Bash
+
 cd server
-npm install // Установка зависимостей
-npm run prisma:generate // Генерация модулей prisma для работы ORM
-npm run prisma:migrate // Миграция
-node prisma:seed // Наполнение базы данных
-npm run dev // Запуск проекта
-```
-cd client
-npm install // Установка зависимостей
-npm run dev // Запуск проекта
 
-## Важно знать!!!
-Сервер работает с postgresql.
-Конфиграция подключения к базе данных меняется в .env
+# Установка зависимостей
+npm install
+
+# Генерация модулей Prisma для работы ORM
+npm run prisma:generate
+
+# Применение миграций в базу данных
+npm run prisma:migrate
+
+# Наполнение базы данных начальными данными (Seed)
+node prisma:seed
+
+# Запуск сервера в режиме разработки
+npm run dev
+
+Клиентская часть
+Bash
+
+cd client
+
+# Установка зависимостей
+npm install
+
+# Запуск фронтенд-приложения
+npm run dev
